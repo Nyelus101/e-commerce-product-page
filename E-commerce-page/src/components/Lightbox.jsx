@@ -24,7 +24,7 @@ export default function Lightbox({
               <img
                 src={item.mainImage}
                 alt=""
-                className="big-image lg:w-full lg:rounded-2xl"
+                className="lg:rounded-2xl"
               />
 
               <ul>

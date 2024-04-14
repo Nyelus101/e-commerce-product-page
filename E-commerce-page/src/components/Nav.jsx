@@ -33,7 +33,7 @@ const Nav = () => {
 
   return (
     <>
-      <div className='flex items-center justify-between p-8 md:border-b border-slate-400 max-w-5xl mx-auto'>
+      <div className='flex items-center justify-between p-5 md:border-b border-slate-400 max-w-4xl mx-auto'>
       <div onClick={handleNav} className='-mr-32 block md:hidden relative z-50'>
           {nav ? <AiOutlineClose size={20} className="relative z-50"/> : <AiOutlineMenu size={20} className="relative z-50"/>}
       </div>

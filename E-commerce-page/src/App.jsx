@@ -50,7 +50,7 @@ const App = () => {
         />
       )}
 
-      <section className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:place-items-center lg:py-20">
+      <section className="max-w-4xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:place-items-center lg:py-10">
         <article>
           <div className="lg:hidden">
             {products.map((item, index) => (
@@ -91,12 +91,12 @@ const App = () => {
             <img
               src={mainImage}
               alt=""
-              className="w-full lg:rounded-2xl cursor-pointer"
+              className="w-96 lg:rounded-2xl cursor-pointer"
               onClick={() => setShowLightbox(true)}
             />
           </div>
 
-          <ul className="hidden lg:flex items-center justify-start gap-5 flex-wrap mt-5">
+          <ul className="hidden lg:flex items-center justify-center gap-5 flex-wrap mt-5">
             {products.map((item, index) => (
               <li
                 key={item.id}
@@ -105,20 +105,20 @@ const App = () => {
                   index === value && "border-2 border-orange-400 opacity-80"
                 } border-2 rounded-2xl overflow-hidden cursor-pointer`}
               >
-                <img src={item.thumbnail} alt="" className="w-20" />
+                <img src={item.thumbnail} alt="" className="w-[70px]" />
               </li>
             ))}
           </ul>
         </article>
 
         <article className="px-8 pb-10">
-          <h2 className="bg-slate-100 py-1 px-2 text-orange-400 uppercase tracking-wide text-sm font-bold inline-block rounded shadow mb-10">
+          <h2 className="py-1 px-2 text-orange-400 uppercase tracking-wide text-sm font-bold inline-block rounded shadow mb-3">
             Sneaker company
           </h2>
-          <h1 className="text-slate-900 mb-10 font-bold text-3xl lg:text-4xl">
+          <h1 className="text-slate-900 mb-5 font-bold text-3xl lg:text-3xl">
             Fall Limited Edition Sneakers
           </h1>
-          <p className="text-slate-600 mb-10 leading-relaxed">
+          <p className="text-slate-600 mb-5 leading-relaxed">
             These low-profile sneakers are your perfect casual wear companion.
             Featuring a durable rubber outer sole, they’ll withstand everything
             the weather can offer.
@@ -137,7 +137,7 @@ const App = () => {
             </p>
           </div>
 
-          <div className="mt-10 lg:flex items-center justify-between gap-2">
+          <div className="mt-5 lg:flex items-center justify-between gap-2">
             <ul className="flex items-center justify-between bg-slate-100 py-2 px-4 rounded shadow lg:flex-1">
               <li onClick={handleMinus} className="cursor-pointer">
                 <img src={minus} alt="" />

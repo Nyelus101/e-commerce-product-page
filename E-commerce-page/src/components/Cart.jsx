@@ -3,25 +3,26 @@ import thumbnail from "../images/image-product-1-thumbnail.jpg";
 import iconDelete from "../images/icon-delete.svg";
 
 export default function Cart() {
-  const text = "Autumn Limited Edition Sneakers";
+//   const text = "Autumn Limited Edition Sneakers";
 
   return (
     <>
       <article
-        className="bg-white rounded-2xl shadow-2xl p-8 absolute right-8 top-32 left-8 lg:w-96 lg:left-auto lg:top-20"
+        className="bg-white rounded-2xl shadow-2xl p-8 absolute lg:right-48 top-32 left-8 w-96 lg:w-72 lg:left-auto lg:top-20"
         style={{
           zIndex: 1000,
         }}
       >
-        <h2 className="border-b border-slate-400 font-bold pb-2 mb-8">Cart</h2>
+        <h2 className="border-b border-slate-400 font-bold pb-2 mb-8 lg:mb-5">Cart</h2>
 
         <div className="flex items-center justify-between">
-          <img src={thumbnail} alt="" className="rounded-lg w-14" />
+          <img src={thumbnail} alt="" className="rounded-lg w-14 lg:w-10" />
           <ul>
-            <li className="text-slate-600 text-sm">{`${text.substring(
+            {/* <li className="text-slate-600 text-sm">{`${text.substring(
               0,
               23
-            )}...`}</li>
+            )}...`}</li> */}
+            <li className="text-slate-600 text-sm lg:text-xs">Fall Limited Edition Sneakers</li>
             <li className="text-slate-600 text-sm">
               $125.00 x 3{" "}
               <span className="font-bold text-slate-900">$375.00</span>
