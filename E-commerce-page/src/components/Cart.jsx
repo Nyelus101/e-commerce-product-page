@@ -8,7 +8,7 @@ export default function Cart() {
   return (
     <>
       <article
-        className="bg-white rounded-2xl shadow-2xl p-8 absolute lg:right-48 top-32 left-8 w-96 lg:w-72 lg:left-auto lg:top-20"
+        className="bg-white rounded-2xl shadow-2xl p-8 absolute lg:right-[20] top-32 left-8 w-96 lg:w-72 lg:left-auto lg:top-20"
         style={{
           zIndex: 1000,
         }}

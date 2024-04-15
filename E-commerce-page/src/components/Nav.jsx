@@ -51,13 +51,15 @@ const Nav = () => {
       </div>
       <div>
         <ul className='flex items-center justify-start gap-4'>
+          <div className='relative' >
           <li><button onClick={() => setCartIsOpen(!cartIsOpen)}>
                 <AiOutlineShoppingCart className="text-2xl text-slate-600" />
               </button></li>
               <li>{cartIsOpen && <Cart />}</li>
+              <div className='w-3 h-3 bg-orange-500 text-white rounded-full absolute top-0 right-0 flex items-center justify-center text-xs' >4</div>
+          </div>
           <li>
-            <img src={avatar} alt="" className='w-10
-            '/>
+            <img src={avatar} alt="" className='w-10'/>
           </li>
         </ul>
       </div>
