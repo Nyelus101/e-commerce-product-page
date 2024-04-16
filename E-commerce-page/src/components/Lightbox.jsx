@@ -15,6 +15,8 @@ export default function Lightbox({
           <img src={close} alt="" className="w-10 absolute top-10 right-10" />
         </button>
 
+{/* //Continue from here tommorrow. Just remaining the lightbox size. */}
+
         <div className="flex items-center justify-center h-screen">
           {products.map((item, index) => (
             <div

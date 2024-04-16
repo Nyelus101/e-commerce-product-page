@@ -3,8 +3,11 @@ import logo from "../images/logo.svg";
 import { AiOutlineShoppingCart, AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import avatar from "../images/image-avatar.png";
 import Cart from './Cart';
+import { useFigure } from '../FigureContext';
 
 const Nav = () => {
+
+  const { figure } = useFigure();
 
   const [nav, setNav] = useState(false);
 
@@ -34,18 +37,18 @@ const Nav = () => {
   return (
     <>
       <div className='flex items-center justify-between p-5 md:border-b border-slate-400 max-w-4xl mx-auto'>
-      <div onClick={handleNav} className='-mr-32 block md:hidden relative z-50'>
-          {nav ? <AiOutlineClose size={20} className="relative z-50"/> : <AiOutlineMenu size={20} className="relative z-50"/>}
+      <div onClick={handleNav} className='-mr-32 block md:hidden relative z-[100]'>
+          {nav ? <AiOutlineClose size={20} className="relative"/> : <AiOutlineMenu size={20} className="relative"/>}
       </div>
       <div className='flex items-center justify-start gap-4'>
         <img src={logo} alt="" className='p-0'/>
-        <nav>
-          <ul className={`${nav ? 'block absolute left-0 top-0 w-[60%] h-full bg-white pt-32 pl-8 space-y-4' : '  hidden md:flex'}  items-center justify-start gap-4`}>
-            <li>Collections</li>
-            <li>Men</li>
-            <li>Women</li>
-            <li>About</li>
-            <li>Contact</li>
+        <nav className='z-[50]'>
+          <ul className={`${nav ? 'block absolute left-0 top-0 w-[60%] h-full bg-white pt-32 pl-8 space-y-4' : '  hidden md:flex '}  items-center justify-start gap-4`}>
+            <li className='lg:hover:border-b-2 border-orange-400'>Collections</li>
+            <li className='lg:hover:border-b-2 border-orange-400'>Men</li>
+            <li className='lg:hover:border-b-2 border-orange-400'>Women</li>
+            <li className='lg:hover:border-b-2 border-orange-400'>About</li>
+            <li className='lg:hover:border-b-2 border-orange-400'>Contact</li>
           </ul>
         </nav>
       </div>
@@ -56,10 +59,11 @@ const Nav = () => {
                 <AiOutlineShoppingCart className="text-2xl text-slate-600" />
               </button></li>
               <li>{cartIsOpen && <Cart />}</li>
-              <div className='w-3 h-3 bg-orange-500 text-white rounded-full absolute top-0 right-0 flex items-center justify-center text-xs' >4</div>
+              {figure > 0 ? <div className='w-4 h-4 bg-orange-500 text-white rounded-full absolute -top-1 -right-2 flex items-center justify-center text-xs'>{figure} </div> : null}
+
           </div>
           <li>
-            <img src={avatar} alt="" className='w-10'/>
+              <img src={avatar} alt="" className='w-10 rounded-full hover:border-2 border-orange-400'/>
           </li>
         </ul>
       </div>
