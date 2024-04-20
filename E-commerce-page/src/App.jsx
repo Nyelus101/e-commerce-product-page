@@ -65,6 +65,7 @@ const App = () => {
         {showLightbox && (
           <Lightbox
             products={products}
+            setSlideIndex={setSlideIndex}
             slideIndex={slideIndex}
             nextSlide={nextSlide}
             previousSlide={previousSlide}
@@ -74,7 +75,7 @@ const App = () => {
 
         <section className="max-w-4xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:place-items-center lg:py-10">
           <article>
-            <div className="lg:hidden ">
+            <div className="lg:hidden">
               {products.map((item, index) => (
                 <div
                   key={index}
@@ -83,8 +84,8 @@ const App = () => {
                   <img
                     src={item.mainImage}
                     alt=""
-                    className="w-full h-96 lg:rounded-2xl cursor-pointer"
-                    onClick={() => setShowLightbox(true)}
+                    className="w-full h-auto lg:rounded-2xl cursor-pointer"
+                    // onClick={() => setShowLightbox(true)}
                   />
 
                   <ul className="lg:hidden">
@@ -119,17 +120,18 @@ const App = () => {
             </div>
 
             <ul className="hidden lg:flex items-center justify-center gap-5 flex-wrap mt-5">
-              {products.map((item, index) => (
-                <li
-                  key={item.id}
-                  onClick={() => setValue(index)}
-                  className={`${
-                    index === value && "border-2 border-orange-400 opacity-80"
-                  } border-2 rounded-2xl overflow-hidden cursor-pointer`}
-                >
-                  <img src={item.thumbnail} alt="" className="w-[70px]" />
-                </li>
-              ))}
+            {products.map((item, index) => (
+              <li
+                key={item.id}
+                onClick={() => setValue(index)}
+                className={`border-2 rounded-2xl overflow-hidden cursor-pointer ${
+                  index === value && !showLightbox && "border-orange-400 opacity-80"
+                }`}
+              >
+                <img src={item.thumbnail} alt="" className="w-[70px]" />
+              </li>
+            ))}
+
             </ul>
           </article>
 

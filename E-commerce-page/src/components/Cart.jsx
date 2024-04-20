@@ -14,12 +14,12 @@ export default function Cart() {
   return (
     <>
       <article
-        className="bg-white rounded-2xl shadow-2xl p-8 absolute lg:-right-32  top-32 -left-80 w-96 lg:w-72 lg:left-auto lg:top-12"
+        className="bg-white rounded-2xl shadow-2xl p-4 absolute lg:-right-32  top-32 -left-96 ml-5 w-[450px]   lg:w-72 lg:left-auto lg:top-12"
         style={{
           zIndex: 1000,
         }}
       >
-        <h2 className="border-b border-slate-400 font-bold pb-2 mb-8 lg:mb-5">Cart</h2>
+        <h2 className="border-b border-slate-400 font-bold pb-5 mb-12 lg:mb-5">Cart</h2>
 
         { figure <= 0 ? <div className="h-40 text-center p-12 lg:h-24 lg:w-60" >Your cart is empty</div> : <div>
         <div className="flex items-center justify-between">

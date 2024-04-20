@@ -37,13 +37,13 @@ const Nav = () => {
   return (
     <>
       <div className='flex items-center justify-between p-5 md:border-b border-slate-400 max-w-4xl mx-auto'>
-      <div onClick={handleNav} className='-mr-32 block md:hidden relative z-[100]'>
+      <div onClick={handleNav} className='-mr-32 block md:hidden relative z-[3000]'>
           {nav ? <AiOutlineClose size={20} className="relative"/> : <AiOutlineMenu size={20} className="relative"/>}
       </div>
       <div className='flex items-center justify-start gap-4'>
         <img src={logo} alt="" className='p-0'/>
-        <nav className='z-[50]'>
-          <ul className={`${nav ? 'block absolute left-0 top-0 w-[60%] h-full bg-white pt-32 pl-8 space-y-4' : '  hidden md:flex '}  items-center justify-start gap-4`}>
+        <nav className='z-[2050]'>
+          <ul className={`${nav ? 'block absolute left-0 top-0 w-[60%] h-full bg-white pt-24 pl-5 space-y-4' : '  hidden md:flex '}  items-center justify-start gap-4`}>
             <li className='lg:hover:border-b-2 border-orange-400'>Collections</li>
             <li className='lg:hover:border-b-2 border-orange-400'>Men</li>
             <li className='lg:hover:border-b-2 border-orange-400'>Women</li>
