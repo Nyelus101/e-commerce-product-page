@@ -41,8 +41,8 @@ const Nav = () => {
       <div onClick={handleNav} className="flex items-center justify-start gap-4 z-[3000]">
           {nav ? <AiOutlineClose size={20} className="relative md:hidden"/> : <AiOutlineMenu size={20} className="relative md:hidden"/>}
       </div>
-      <div className='flex items-center justify-start gap-4'>
-        <img src={logo} alt="" className='p-0'/>
+      <div className='flex items-center justify-start gap-4 md:-ml-9'>
+        <img src={logo} alt="" className='md:pr-6'/>
         <nav className='z-[2050] h-full'>
           <ul className={`${nav ? 'block absolute left-0 top-0 w-[60%] h-full bg-white pt-24 pl-5 space-y-4' : '  hidden md:flex '}  items-center justify-start gap-4`}>
             <li className='md:hover:border-b-2 border-orange-400'>Collections</li>
@@ -54,7 +54,7 @@ const Nav = () => {
         </nav>
       </div>
       </div>
-      <div>
+      <div className='md:-mr-5'>
         <ul className='relative flex items-center justify-start gap-2 md:gap-4'>
           {/* <div className='relative' > */}
           <li><button onClick={() => setCartIsOpen(!cartIsOpen)}>

@@ -14,14 +14,14 @@ export default function Cart() {
   return (
     <>
       <article
-        className="bg-white rounded-2xl shadow-2xl p-4 absolute md:-right-32  top-16 -left-[273px] ml-5 w-[340px] md:w-72 md:left-auto md:top-12"
+        className="bg-white rounded-2xl shadow-2xl p-4 absolute md:-right-16  top-16 -left-[273px] ml-5 w-[340px] md:w-72 md:left-auto md:top-12"
         style={{
           zIndex: 1000,
         }}
       >
         <h2 className="border-b border-slate-400 font-bold pb-5 mb-12 md:mb-5">Cart</h2>
 
-        { figure <= 0 ? <div className="h-48 text-center p-10 md:h-24 md:w-60" >Your cart is empty</div> : <div className="h-48">
+        { figure <= 0 ? <div className="h-48 text-center p-10 md:h-32 md:w-60" >Your cart is empty</div> : <div className="h-48 md:h-32">
         <div className="flex items-center justify-between">
           <img src={thumbnail} alt="" className="rounded-md w-14 md:w-10" />
           <ul>

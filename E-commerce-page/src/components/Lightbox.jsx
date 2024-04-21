@@ -41,7 +41,7 @@ style={{
   zIndex: 1000,
 }}>
   <div className="relative">
-    <button onClick={() => setShowLightbox(false)} className="absolute top-[-40px] right-2 text-orange bg-transparent border-none cursor-pointer">
+    <button onClick={() => setShowLightbox(false)} className="absolute top-[-40px] right-2 text-orange-500 hover:text-orange-600  bg-transparent border-none cursor-pointer">
       <img src={close} alt="" />
     </button>
     {/* Include your code and do the logic */}
@@ -56,7 +56,7 @@ style={{
                     <li>
                       <button
                         onClick={previousSlide}
-                        className="bg-white rounded-full p-4 shadow absolute -left-5 top-1/2 -translate-y-16"
+                        className="bg-white rounded-full p-4 shadow absolute -left-5 top-1/2 -translate-y-16 hover:text-orange-600"
                       >
                         <FaChevronLeft />
                       </button>
@@ -64,7 +64,7 @@ style={{
                     <li>
                       <button
                         onClick={nextSlide}
-                        className="bg-white rounded-full p-4 shadow absolute -right-5 top-1/2 -translate-y-16"
+                        className="bg-white rounded-full p-4 shadow absolute -right-5 top-1/2 -translate-y-16 hover:text-orange-600"
                       >
                         <FaChevronRight />
                       </button>
