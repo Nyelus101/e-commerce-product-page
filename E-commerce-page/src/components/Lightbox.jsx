@@ -46,11 +46,11 @@ style={{
     </button>
     {/* Include your code and do the logic */}
     
-            <div className="hidden lg:block">
+            <div className="hidden md:block">
               <img
                 src={mainImage}
                 alt=""
-                className="w-96 lg:rounded-2xl cursor-pointer"
+                className="w-96 md:rounded-2xl cursor-pointer"
               />
               <ul>
                     <li>
@@ -72,7 +72,7 @@ style={{
                   </ul>
             </div>
 
-            <ul className="hidden lg:flex items-center justify-center gap-5 flex-wrap mt-5">
+            <ul className="hidden md:flex items-center justify-center gap-5 flex-wrap mt-5">
               {products.map((item, index) => (
                 <li
                   key={item.id}
@@ -112,7 +112,7 @@ style={{
               <img
                 src={item.mainImage}
                 alt=""
-                className="lg:rounded-2xl"
+                className="md:rounded-2xl"
               />
 
               <ul>
